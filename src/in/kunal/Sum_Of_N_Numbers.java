@@ -11,7 +11,7 @@ public class Sum_Of_N_Numbers {
 //			System.out.println(sum);
 //		}
 		
-		num = num * (num+1)/2;
+		num = num * (num+1)/2;         //using Nth term formula 
 		System.out.println(num);  
 	}
 

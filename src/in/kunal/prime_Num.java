@@ -2,32 +2,30 @@ package in.kunal;
 
 public class prime_Num {
 	
+	
 	public static void main(String[] args) {
-		
-		int upper = 20 ;
-		int lower = 1;
-		
-	    for(int i = lower; i<=upper ;i++) {
-	    	if(isPrime(i)) 
-	    		System.out.print(i + " ");
-	    	 
-	    }
+		int n  =  	28;
+		checkprime(n);
 		
 	}
 	
-	static boolean isPrime( int n ) {
-		
-		if(n<2) 
-			return false;
-		
-		for(int i = 2 ; i<=n;i++) {
-			if(i%n==0) {
-				return true;
-			}
+	private static void checkprime(int n) {
+		int count = 0;
+		if(n<2) {
+			System.out.println("The given num is not prime " + n);
+			System.exit(0);
 		}
 		
-		return false;
+		for(int i = 1 ;i<=n;i++) {
+			if(n%i==0) 
+				count+=1;
+			
+		}
 		
+		if(count >2) 
+			System.out.println("the given num is not prime "  + n);
+		else 
+			System.out.println("Prime num " + n);
 	}
 
 }
